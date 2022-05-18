@@ -10,7 +10,6 @@ public abstract class Componente {
 		this.y = y;
 		this.caverna = caverna;
 		this.tipoComponente = tipoComponente;
-		// instancia os atributos gerais
 	}
 	
 

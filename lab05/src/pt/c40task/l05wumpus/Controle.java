@@ -52,7 +52,7 @@ public class Controle {
 		return status;
 	}
 	
-	public String estaSentindoBrisa(){
+	public String estaSentindoBrisa() {
 		if (hero.isSentindoBrisa()) {
 			return " Sim";
 		}

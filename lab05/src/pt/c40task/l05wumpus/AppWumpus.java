@@ -38,19 +38,28 @@ public class AppWumpus {
 		if (arquivoMovimentos == null)
 			executaInterativo(tk, caverna, controleJogo);
 		else
-			executaOutro(tk, caverna, controleJogo);
+			executaEntrada(tk, caverna, controleJogo);
+		
+		tk.stop();
 	}
    
-   
+   /**
+    * Executa pela entrada do teclado.
+    */
    public static void executaInterativo(Toolkit tk, Caverna caverna, Controle controleJogo) {
 	   Scanner entrada = new Scanner(System.in);
+	   String player;
 	   char[][] cave;
+	   
+	   System.out.print("Nome do jogador: ");
+	   player = entrada.next();
+	   
 		while (true) {
 			cave = controleJogo.getEstadoCaverna();
 			tk.writeBoard(cave, controleJogo.getPontuacao(), controleJogo.getStatus());
 
 			imprimeCaverna(cave);
-			System.out.println("Player: Sting");
+			System.out.println("Player: " + player);
 			System.out.println("Score: " + controleJogo.getPontuacao());
 			System.out.println("Brisa: " + controleJogo.estaSentindoBrisa());
 			System.out.println("Fedor: " + controleJogo.estaSentindoFedor());
@@ -78,9 +87,13 @@ public class AppWumpus {
    }
    
    
-   public static void executaOutro(Toolkit tk, Caverna caverna, Controle controleJogo) {
+   /**
+    * Executa usando o arquivo de movimentos.
+    */
+   public static void executaEntrada(Toolkit tk, Caverna caverna, Controle controleJogo) {
 	   char[][] cave;
 	   String movements = tk.retrieveMovements();
+
 		for (int i = 0; i < movements.length(); i++) {
 			cave = controleJogo.getEstadoCaverna();
 			tk.writeBoard(cave, controleJogo.getPontuacao(), controleJogo.getStatus());
@@ -88,12 +101,14 @@ public class AppWumpus {
 			imprimeCaverna(cave);
 			System.out.println("Player: Sting");
 			System.out.println("Score: " + controleJogo.getPontuacao());
+			System.out.println("Brisa: " + controleJogo.estaSentindoBrisa());
+			System.out.println("Fedor: " + controleJogo.estaSentindoFedor());
 
-			if (controleJogo.getStatus() == 'W') {
+			if (controleJogo.getStatus() == 'w') {
 				System.out.println("Voce ganhou =D !!!");
 				break;
 			}
-			if (controleJogo.getStatus() == 'L') {
+			if (controleJogo.getStatus() == 'n') {
 				System.out.println("Voce perdeu =(...");
 				break;
 			}

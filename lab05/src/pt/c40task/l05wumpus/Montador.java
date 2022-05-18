@@ -71,6 +71,7 @@ public class Montador {
 	private Heroi hero;
 	/**
 	 * se a caverna for valida, a monta e retorna,
+	 * e também guarda o herói,
 	 * se nao for valida, retorna null.
 	 */
 	public Caverna montarCaverna(Toolkit tk) {
