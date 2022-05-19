@@ -8,7 +8,6 @@ Como destaque temos as funções de insereCaverna() e removeCaverna(), definidas
 
 ```
 // o componente chama a caverna pra insercao
->>>>>>> 31a94c37ff8bb22ebdd678bff86a25e75084fdb0
 public void insereCaverna() {
 	caverna.inserirComponente(this, x, y);
 }
