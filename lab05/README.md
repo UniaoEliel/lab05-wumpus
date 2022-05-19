@@ -3,14 +3,9 @@
 ## Arquivos Java sobre Mundo de Wumpus
 [Arquivos](src/pt/c40task/l05wumpus)
 
-<<<<<<< HEAD
+## Destaque
+Como destaque temos as funções de insereCaverna() e removeCaverna(), definidas na classe abstrata Componente, que solicitam a caverna a inserção/remoção, e a caverna solicita a sala a inserção/remoção. Cada componente sabe como é inserido e o que inserir com ele (exemplo: Wumpus e buraco) e sabe como é removido (por exemplo, o Wumpus ao ser removido pede a caverna para remover o fedor em volta dele). Isso permite a fácil inserção de movimentação dos componentes na caverna, caso quiséssemos que o Wumpus se movesse ou criar novos componentes que se movem.
 
-## Destaque
-Como destaque temos as funções de insereCaverna() e removeCaverna(), definidas na classe abstrata Componente, que solicitam a caverna a inserção/remoção, e a caverna solicita a sala a inserção/remoção. Cada componente sabe como é inserido e o que inserir com ele (exemplo: Wumpus e buraco) e sabe como é removido (por exemplo, o Wumpus ao ser removido pede a caverna para remover o fedor em volta dele). Isso permite a fácil inserção de movimentação dos componentes na caverna, caso quiséssemos que o Wumpus se movesse ou criar novos componentes que se movem.
-```
-=======
-## Destaque
-Como destaque temos as funções de insereCaverna() e removeCaverna(), definidas na classe abstrata Componente, que solicitam a caverna a inserção/remoção, e a caverna solicita a sala a inserção/remoção. Cada componente sabe como é inserido e o que inserir com ele (exemplo: Wumpus e buraco) e sabe como é removido (por exemplo, o Wumpus ao ser removido pede a caverna para remover o fedor em volta dele). Isso permite a fácil inserção de movimentação dos componentes na caverna, caso quiséssemos que o Wumpus se movesse ou criar novos componentes que se movem.
 ```
 // o componente chama a caverna pra insercao
 >>>>>>> 31a94c37ff8bb22ebdd678bff86a25e75084fdb0
@@ -21,8 +16,6 @@ public void insereCaverna() {
 public void removeCaverna() {
 	caverna.removerComponente(tipoComponente, x, y);
 }
-<<<<<<< HEAD
-=======
 
 // a caverna chama a sala, que verifica se a inserção é valida.
 // se for valida, insere e retorna true a caverna, que retorna essa
@@ -37,5 +30,4 @@ public boolean inserirComponente(Componente comp, int x, int y) {
 
   return insercaoValida;
 }
->>>>>>> 31a94c37ff8bb22ebdd678bff86a25e75084fdb0
 ```
