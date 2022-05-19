@@ -1,3 +1,5 @@
+# Repositório nao funcionando, tarefa movida para [Novo repositório](https://github.com/UniaoEliel/repositorio_em_dupla)
+
 # Lab 05 - Mundo de Wumpus
 
 ## Arquivos Java sobre Mundo de Wumpus
